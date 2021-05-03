@@ -6,8 +6,8 @@ This project was inspired
 [Philip-Trettner/cpp-std-fwd](hhttps://github.com/Philip-Trettner/cpp-std-fwd).
 
 Project *cpp-std-fwd* is as a proof-of-concept and last comment was Aug 25, 2019
-so this project implemented all forward declarations for C++99/C++03/C++11/C++14
-( some part for C++17 )
+so this project implemented all forward declarations for
+C++99/C++03/C++11/C++14/C++17
 
 ## Usage
 
@@ -117,4 +117,4 @@ doesn't support new standard
 
 ## TODO
 
-* add forward declarations for C++17/C++20
+* add forward declarations for C++20

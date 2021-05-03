@@ -1,0 +1,46 @@
+#pragma once
+
+#include "stdfwd_details.hpp"
+
+#include "size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class... Types> class variant;
+
+	template<class Variant> struct variant_size;
+	template<size_t I, class Variant> struct variant_alternative;
+
+	struct monostate;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_PURE_BEGIN
+
+	class bad_variant_access;
+
+STDFWD_STD_PURE_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class... Types>
+	using variant = std::variant< Types ... >;
+
+	template<class Variant>
+	using variant_size = std::variant_size< Variant >;
+
+	template<std::size_t I, class Variant>
+	using variant_alternative = std::variant_alternative<I, Variant>;
+
+	using std::monostate;
+	using std::bad_variant_access;
+
+}
+
+//------------------------------------------------------------------------------

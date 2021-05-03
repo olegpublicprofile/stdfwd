@@ -25,8 +25,8 @@ namespace chrono
 
 	STDFWD_BEGIN_CHRONO_CLOCKS
 
-	class system_clock;
-	class steady_clock;
+	struct system_clock;
+	struct steady_clock;
 
 	#if defined(STDFWD_IS_LIBSTDCPP)
 	using high_resolution_clock = system_clock;

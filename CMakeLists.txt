@@ -31,7 +31,7 @@ else()
             -Wall
         )
 		if(CMAKE_COMPILER_IS_GNUCXX)
-			target_link_libraries(${PROJECT_NAME} stdc++fs)
+			target_link_libraries(${PROJECT_NAME} stdc++fs tbb)
 		endif()
     endif()
 

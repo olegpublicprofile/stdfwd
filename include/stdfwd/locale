@@ -26,7 +26,7 @@ STDFWD_STD_BEGIN
 	class wbuffer_convert;
 
 	class locale;
-	class ctype_base;
+	struct ctype_base;
 	template< class charT > class ctype;
 
 	class codecvt_base;
@@ -44,7 +44,11 @@ STDFWD_STD_BEGIN
 	template< class charT > class collate_byname;
 	STDFWD_CPP11_END
 
+	#ifdef STDFWD_IS_MSVC
+	struct time_base;
+	#else
 	class time_base;
+	#endif
 	STDFWD_CPP11_BEGIN
 	template< class charT, class InputIterator > class time_get;
 	template< class charT, class InputIterator > class time_get_byname;
@@ -52,7 +56,11 @@ STDFWD_STD_BEGIN
 	template< class charT, class OutputIterator > class time_put;
 	template< class charT, class OutputIterator > class time_put_byname;
 
+	#ifdef STDFWD_IS_MSVC
+	struct money_base;
+	#else
 	class money_base;
+	#endif
 	STDFWD_CPP11_BEGIN
 	template< class charT, class InputIterator > class money_get;
 	template< class charT, class OutputIterator > class money_put;
@@ -60,7 +68,7 @@ STDFWD_STD_BEGIN
 	template< class charT, bool Intl > class moneypunct_byname;
 	STDFWD_CPP11_END
 
-	class messages_base;
+	struct messages_base;
 	STDFWD_CPP11_BEGIN
 	template< class charT > class messages;
 	template< class charT > class messages_byname;

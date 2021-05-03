@@ -13,7 +13,11 @@ STDFWD_STD_BEGIN
 
 	STDFWD_CPP11_BEGIN
 
+	#ifdef STDFWD_IS_MSVC
+	template<class CharT> class regex_traits;
+	#else
 	template<class CharT> struct regex_traits;
+	#endif
 	template<class CharT, class Traits > class basic_regex;
 
 	template<class BiIt> class sub_match;

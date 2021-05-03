@@ -12,6 +12,7 @@
 #include "headers_tests/iterator_headers_tests.hpp"
 #include "headers_tests/localization_headers_tests.hpp"
 #include "headers_tests/numeric_headers_tests.hpp"
+#include "headers_tests/algorithms_headers_tests.hpp"
 
 //------------------------------------------------------------------------------
 
@@ -33,6 +34,7 @@ void run()
 	iterator_headers_tests::run();
 	localization_headers_tests::run();
 	numeric_headers_tests::run();
+	algorithms_headers_tests::run();
 }
 
 //------------------------------------------------------------------------------

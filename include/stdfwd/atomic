@@ -24,7 +24,7 @@ STDFWD_STD_BEGIN
 	using atomic_char32_t       = atomic<char32_t>;
 	using atomic_wchar_t        = atomic<wchar_t>;
 
-	class atomic_flag;
+	struct atomic_flag;
 
 STDFWD_STD_END
 

@@ -17,6 +17,19 @@
 	#define STDFWD_IS_ONCE_FLAG
 #endif
 
+#ifdef __has_include
+	#if __has_include(<version>)
+		#include <version>
+	#endif
+#endif
+
+#ifdef __cpp_lib_scoped_lock
+	#if STDFWD_CPP_VERSION >= __cpp_lib_scoped_lock
+		#define STDFWD_IS_SCOPED_LOCK
+	#endif
+#endif
+
+
 //------------------------------------------------------------------------------
 
 namespace mutex_tests {
@@ -53,6 +66,10 @@ public:
 	std::unique_lock< std::mutex > getUniqueLock();
 	#endif
 
+	#ifdef STDFWD_IS_SCOPED_LOCK
+	std::scoped_lock< std::mutex > getScopedLock();
+	#endif
+
 	#ifdef STDFWD_IS_DEFER_LOCK_T
 	std::defer_lock_t getDeferLockT();
 	#endif
@@ -68,6 +85,7 @@ public:
 	#ifdef STDFWD_IS_ONCE_FLAG
 	std::once_flag & getOnceFlag();
 	#endif
+
 };
 
 //------------------------------------------------------------------------------

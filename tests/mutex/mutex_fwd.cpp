@@ -76,6 +76,16 @@ std::unique_lock< std::mutex > TestClass::getUniqueLock()
 
 //------------------------------------------------------------------------------
 
+#ifdef STDFWD_IS_SCOPED_LOCK
+std::scoped_lock< std::mutex > TestClass::getScopedLock()
+{
+	static std::mutex m;
+	return std::scoped_lock< std::mutex >( m );
+}
+#endif
+
+//------------------------------------------------------------------------------
+
 #ifdef STDFWD_IS_DEFER_LOCK_T
 std::defer_lock_t TestClass::getDeferLockT()
 {

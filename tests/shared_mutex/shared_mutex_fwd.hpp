@@ -13,17 +13,13 @@
 //------------------------------------------------------------------------------
 
 #ifdef __cpp_lib_shared_mutex
-	#if __cplusplus >= __cpp_lib_shared_mutex
-		#define STDFWD_IS_SHARED_MUTEX
-	#endif
-#else
-	#ifdef STDFWD_IS_CPP17
+	#if STDFWD_CPP_VERSION >= __cpp_lib_shared_mutex
 		#define STDFWD_IS_SHARED_MUTEX
 	#endif
 #endif
 
 #ifdef __cpp_lib_shared_timed_mutex
-	#if __cplusplus >= __cpp_lib_shared_timed_mutex
+	#if STDFWD_CPP_VERSION >= __cpp_lib_shared_timed_mutex
 		#define STDFWD_IS_SHARED_TIMED_MUTEX
 	#endif
 #else

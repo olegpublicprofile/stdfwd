@@ -9,7 +9,11 @@
 STDFWD_STD_BEGIN
 
 	template< class T, std::size_t N>
+	#ifdef STDFWD_IS_MSVC
+	class array;
+	#else
 	struct array;
+	#endif
 
 STDFWD_STD_END
 

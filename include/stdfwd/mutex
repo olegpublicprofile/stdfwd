@@ -13,12 +13,13 @@ STDFWD_STD_BEGIN
 
 	template< class Mutex >	class lock_guard;
 	template< class Mutex >	class unique_lock;
+	template< class... MutexTypes > class scoped_lock;
 
 	struct defer_lock_t;
 	struct try_to_lock_t;
 	struct adopt_lock_t;
 
-	class once_flag;
+	struct once_flag;
 
 STDFWD_STD_END
 
@@ -35,6 +36,8 @@ namespace stdfwd
 	using lock_guard = std::lock_guard< Mutex >;
 	template< class Mutex >
 	using unique_lock = std::unique_lock< Mutex >;
+	template< class... MutexTypes >
+	using scoped_lock = std::scoped_lock< MutexTypes... >;
 
 	using std::defer_lock_t;
 	using std::try_to_lock_t;

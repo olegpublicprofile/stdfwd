@@ -51,6 +51,13 @@ void run_full()
 	}
 	#endif
 
+	#ifdef STDFWD_IS_SCOPED_LOCK
+	{
+		std::scoped_lock< std::mutex > scoped_lock_mutex = testObj.getScopedLock();
+		(void)scoped_lock_mutex;
+	}
+	#endif
+
 	#ifdef STDFWD_IS_RECURSIVE_TIMED_MUTEX
 	std::defer_lock_t defer_lock_t = testObj.getDeferLockT();
 	(void)defer_lock_t;

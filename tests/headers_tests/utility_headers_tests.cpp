@@ -24,6 +24,15 @@
 #include "tests/tuple/tuple_mini.hpp"
 #include "tests/tuple/tuple_full.hpp"
 
+#include "tests/optional/optional_mini.hpp"
+#include "tests/optional/optional_full.hpp"
+
+#include "tests/any/any_mini.hpp"
+#include "tests/any/any_full.hpp"
+
+#include "tests/valarray/valarray_mini.hpp"
+#include "tests/valarray/valarray_full.hpp"
+
 //------------------------------------------------------------------------------
 
 namespace utility_headers_tests {
@@ -55,6 +64,15 @@ void run()
 
 	tuple_tests::run_mini();
 	tuple_tests::run_full();
+
+	optional_tests::run_mini();
+	optional_tests::run_full();
+
+	any_tests::run_mini();
+	any_tests::run_full();
+
+	valarray_tests::run_mini();
+	valarray_tests::run_full();
 }
 
 //------------------------------------------------------------------------------
