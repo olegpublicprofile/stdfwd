@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../vector"
+#include "../less"
+#include "../allocator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T, class Container, class Compare >
+	class priority_queue;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<
+		class T,
+		class Container = vector< T >,
+		class Compare = std::less< typename Container::value_type >
+	>
+	using priority_queue = std::priority_queue< T, Container, Compare >;
+}
+
+//------------------------------------------------------------------------------

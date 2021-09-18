@@ -1,0 +1,3 @@
+#pragma once
+
+#include "exception_headers/bad_exception"

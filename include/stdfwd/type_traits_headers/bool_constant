@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../integral_constant"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    template< bool B >
+    using bool_constant = integral_constant< bool, B >;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    template< bool B >
+    using bool_constant = std::bool_constant< B >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+#pragma once
+
+#include "../integral_constant"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    using false_type = integral_constant< bool, false >;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    using std::false_type;
+}
+
+//------------------------------------------------------------------------------

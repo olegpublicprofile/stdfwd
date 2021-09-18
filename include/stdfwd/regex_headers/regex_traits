@@ -1,0 +1,29 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+
+	#ifdef STDFWD_IS_MSVC
+	template<class CharT> class regex_traits;
+	#else
+	template<class CharT> struct regex_traits;
+	#endif
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class CharT>
+	using regex_traits = std::regex_traits< CharT >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../basic_string"
+#include "../char_traits"
+#include "../allocator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_INLINE_BEGIN
+
+	using string = basic_string<char, char_traits<char>, allocator<char> >;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::string;
+}
+
+//------------------------------------------------------------------------------

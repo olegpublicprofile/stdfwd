@@ -1,0 +1,20 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class IntType> class negative_binomial_distribution;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using negative_binomial_distribution = std::negative_binomial_distribution< int >;
+}
+
+//------------------------------------------------------------------------------

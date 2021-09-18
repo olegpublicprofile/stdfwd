@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class Engine, size_t w, class UIntType>
+	class independent_bits_engine;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class Engine, std::size_t k, class UIntType>
+	using independent_bits_engine =
+		std::independent_bits_engine< Engine, k, UIntType>
+	;
+}
+
+//------------------------------------------------------------------------------

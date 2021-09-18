@@ -1,46 +1,9 @@
 #pragma once
 
-#include "stdfwd_details.hpp"
+#include "memory_resource_headers/memory_resource"
 
-//------------------------------------------------------------------------------
-
-STDFWD_STD_BEGIN
-namespace pmr
-{
-	template< class T > class polymorphic_allocator;
-}
-STDFWD_STD_END
-
-STDFWD_STD_PURE_BEGIN
-namespace pmr
-{
-	class memory_resource;
-
-	#ifdef STDFWD_IS_MSVC
-	struct unsynchronized_pool_resource;
-	#else
-	class unsynchronized_pool_resource;
-	#endif
-	class synchronized_pool_resource;
-	class monotonic_buffer_resource;
-
-	struct pool_options;
-}
-STDFWD_STD_PURE_END
-
-//------------------------------------------------------------------------------
-
-namespace stdfwd::pmr
-{
-	template< class T >
-	using polymorphic_allocator = std::pmr::polymorphic_allocator< T >;
-
-	using std::pmr::memory_resource;
-	using std::pmr::synchronized_pool_resource;
-	using std::pmr::unsynchronized_pool_resource;
-	using std::pmr::monotonic_buffer_resource;
-
-	using std::pmr::pool_options;
-}
-
-//------------------------------------------------------------------------------
+#include "polymorphic_allocator"
+#include "unsynchronized_pool_resource"
+#include "synchronized_pool_resource"
+#include "monotonic_buffer_resource"
+#include "pool_options"

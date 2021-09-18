@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class UIntType, size_t w, size_t s, size_t r>
+	class subtract_with_carry_engine;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class UIntType, std::size_t w, std::size_t s, std::size_t r>
+	using subtract_with_carry_engine =
+		std::subtract_with_carry_engine< UIntType, w, s, r >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../regex_traits"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+
+	template<class CharT, class Traits > class basic_regex;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class CharT, class Traits = regex_traits<CharT> >
+	using basic_regex = std::basic_regex< CharT, Traits >;
+}
+
+//------------------------------------------------------------------------------

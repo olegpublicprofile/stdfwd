@@ -1,0 +1,28 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../linear_congruential_engine"
+#include "../uint_fast32_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	typedef linear_congruential_engine<
+		uint_fast32_t,
+		16807UL,
+		0UL,
+		2147483647UL
+	> minstd_rand0;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::minstd_rand0;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,3 @@
+#pragma once
+
+#include "memory_headers/enable_shared_from_this"

@@ -1,0 +1,25 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../istreambuf_iterator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+	template< class charT, class InputIterator > class money_get;
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class charT, class InputIterator = istreambuf_iterator<charT> >
+	using money_get = std::money_get< charT, InputIterator >;
+}
+
+//------------------------------------------------------------------------------

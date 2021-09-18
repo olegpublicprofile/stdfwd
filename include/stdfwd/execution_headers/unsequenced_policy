@@ -1,0 +1,40 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+#if defined(STDFWD_IS_LIBSTDCPP)
+namespace __pstl::execution
+{
+inline namespace v1
+{
+	class unsequenced_policy;
+}
+}
+#endif
+
+//------------------------------------------------------------------------------
+
+#if defined(STDFWD_IS_LIBSTDCPP)
+namespace std::execution
+{
+	using __pstl::execution::unsequenced_policy;
+}
+#else
+STDFWD_STD_BEGIN
+namespace execution
+{
+	class unsequenced_policy;
+};
+STDFWD_STD_END
+#endif
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd::execution
+{
+	using std::execution::unsequenced_policy;
+}
+
+//------------------------------------------------------------------------------

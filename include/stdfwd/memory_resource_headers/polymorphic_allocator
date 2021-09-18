@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_PURE_BEGIN
+namespace pmr
+{
+	template< class T > class polymorphic_allocator;
+}
+STDFWD_STD_PURE_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd::pmr
+{
+	template< class T >
+	using polymorphic_allocator = std::pmr::polymorphic_allocator< T >;
+}
+
+//------------------------------------------------------------------------------

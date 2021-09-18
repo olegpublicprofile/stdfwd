@@ -1,0 +1,28 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+#if defined (STDFWD_IS_LIBSTDCPP)
+
+	#if __WORDSIZE == 64
+		typedef long int __intmax_t;
+	#else
+		__extension__ typedef long long int __intmax_t;
+	#endif
+
+	typedef __intmax_t intmax_t;
+
+#elif defined (STDFWD_IS_LIBCPP)
+	typedef __INTMAX_TYPE__ intmax_t;
+
+#elif defined (STDFWD_IS_MSVC)
+	typedef long long int intmax_t;
+#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------

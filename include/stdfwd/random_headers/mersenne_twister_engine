@@ -1,0 +1,29 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class UIntType, size_t w, size_t n, size_t m, size_t r,
+		   UIntType a, size_t u, UIntType d, size_t s,
+		   UIntType b, size_t t,
+		   UIntType c, size_t l, UIntType f
+	> class mersenne_twister_engine;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class UIntType, UIntType a, UIntType c, UIntType m>
+	using linear_congruential_engine =
+		std::linear_congruential_engine< UIntType,a,c,m	>;
+
+}
+
+//------------------------------------------------------------------------------

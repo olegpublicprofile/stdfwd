@@ -1,0 +1,20 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class IntType> class poisson_distribution;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using poisson_distribution = std::poisson_distribution< int >;
+}
+
+//------------------------------------------------------------------------------

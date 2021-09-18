@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    template< class T, T v > struct integral_constant;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    template< class T, T v >
+    using integral_constant = std::integral_constant< T, v >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../intmax_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+template <intmax_t N, intmax_t D> struct ratio;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template <std::intmax_t N, std::intmax_t D = 1>
+	using ratio = std::ratio< N, D >;
+}
+
+//------------------------------------------------------------------------------

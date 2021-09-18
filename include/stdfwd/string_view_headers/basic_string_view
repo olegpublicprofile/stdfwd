@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../char_traits"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class CharT, class Traits >
+	class basic_string_view;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class CharT, class Traits = std::char_traits< CharT > >
+	using basic_string_view = std::basic_string_view< CharT, Traits >;
+}
+
+//------------------------------------------------------------------------------

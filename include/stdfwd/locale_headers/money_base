@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	#ifdef STDFWD_IS_MSVC
+	struct money_base;
+	#else
+	class money_base;
+	#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::money_base;
+}
+
+//------------------------------------------------------------------------------
+
+

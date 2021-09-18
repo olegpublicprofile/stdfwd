@@ -1,0 +1,24 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class UIntType, UIntType a, UIntType c, UIntType m>
+	class linear_congruential_engine;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class UIntType, UIntType a, UIntType c, UIntType m>
+	using linear_congruential_engine =
+		std::linear_congruential_engine< UIntType,a,c,m	>;
+
+}
+
+//------------------------------------------------------------------------------

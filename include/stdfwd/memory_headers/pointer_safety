@@ -1,0 +1,25 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	#ifdef STDFWD_IS_LIBCPP
+	struct pointer_safety;
+	#else
+	enum class pointer_safety;
+	#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::pointer_safety;
+
+}
+
+//------------------------------------------------------------------------------

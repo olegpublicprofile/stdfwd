@@ -1,0 +1,35 @@
+#pragma once
+
+#include "filesystem_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_BEGIN_NAMESPACE_FILESYSTEM
+
+	#if defined(STDFWD_IS_LIBCPP)
+	enum class perm_options : unsigned char;
+	#elif defined(STDFWD_IS_MSVC)
+	enum class perm_options;
+	#else
+	enum class perm_options : unsigned;
+	#endif
+
+STDFWD_END_NAMESPACE_FILESYSTEM
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+namespace filesystem {
+
+#ifdef STDFWD_IS_CPP17
+
+	using std::filesystem::perm_options;
+
+#endif
+
+} // namespace filesystem
+} // namespace stdfwd
+
+//------------------------------------------------------------------------------
+
+

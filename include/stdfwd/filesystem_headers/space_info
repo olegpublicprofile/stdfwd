@@ -1,0 +1,29 @@
+#pragma once
+
+#include "filesystem_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_BEGIN_NAMESPACE_FILESYSTEM
+
+	struct space_info;
+
+STDFWD_END_NAMESPACE_FILESYSTEM
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+namespace filesystem {
+
+#ifdef STDFWD_IS_CPP17
+
+	using std::filesystem::space_info;
+
+#endif
+
+} // namespace filesystem
+} // namespace stdfwd
+
+//------------------------------------------------------------------------------
+
+

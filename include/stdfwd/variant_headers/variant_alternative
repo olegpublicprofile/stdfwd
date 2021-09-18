@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    template<size_t I, class Variant> struct variant_alternative;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    template<std::size_t I, class Variant>
+    using variant_alternative = std::variant_alternative<I, Variant>;
+}
+
+//------------------------------------------------------------------------------

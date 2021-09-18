@@ -1,0 +1,25 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+
+	template<class BiIt> class sub_match;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class BiIt>
+	using sub_match = std::sub_match< BiIt >;
+}
+
+//------------------------------------------------------------------------------

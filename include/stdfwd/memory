@@ -1,86 +1,18 @@
 #pragma once
 
-#include "stdfwd_details.hpp"
+#include "allocator"
+#include "pointer_traits"
+#include "pointer_safety"
+#include "allocator_traits"
+#include "allocator_arg_t"
+#include "uses_allocator"
+#include "raw_storage_iterator"
 
-//------------------------------------------------------------------------------
+#include "default_delete"
 
-STDFWD_STD_BEGIN
-
-	template< class T > class allocator;
-
-	template< class Ptr > struct pointer_traits;
-
-	#ifdef STDFWD_IS_LIBCPP
-	struct pointer_safety;
-	#else
-	enum class pointer_safety;
-	#endif
-
-	template< class Alloc > struct allocator_traits;
-
-	struct allocator_arg_t;
-
-	template< class T, class Alloc > struct uses_allocator;
-
-	template< class OutputIt, class T >
-	class raw_storage_iterator;
-
-	template< class T, class Deleter > class unique_ptr;
-
-	template< class T > class shared_ptr;
-	template< class T > class weak_ptr;
-	template< class T > class auto_ptr;
-
-	template< class T > class enable_shared_from_this;
-
-	class bad_weak_ptr;
-	template< class T > struct default_delete;
-
-STDFWD_STD_END
-
-//------------------------------------------------------------------------------
-
-namespace stdfwd
-{
-	template< class Ptr >
-	using pointer_traits = std::pointer_traits< Ptr >;
-
-	using std::pointer_safety;
-
-	template< class T >
-	using allocator = std::allocator< T >;
-
-	template< class Alloc >
-	using allocator_traits = std::allocator_traits< Alloc >;
-
-	using std::allocator_arg_t;
-
-	template< class T, class Alloc >
-	using uses_allocator = std::uses_allocator< T, Alloc >;
-
-	template< class OutputIt, class T >
-	using raw_storage_iterator = std::raw_storage_iterator< OutputIt, T >;
-
-	template< class T, class Deleter = std::default_delete<T> >
-	using unique_ptr = std::unique_ptr< T, Deleter >;
-
-	template< class T >
-	using shared_ptr = std::shared_ptr< T >;
-
-	template< class T >
-	using weak_ptr = std::weak_ptr< T >;
-
-	template< class T >
-	using auto_ptr = std::auto_ptr< T >;
-
-	template< class T >
-	using enable_shared_from_this = std::enable_shared_from_this< T >;
-
-	using std::bad_weak_ptr;
-
-	template< class T >
-	using default_delete = std::default_delete< T >;
-
-}
-
-//------------------------------------------------------------------------------
+#include "unique_ptr"
+#include "shared_ptr"
+#include "weak_ptr"
+#include "auto_ptr"
+#include "enable_shared_from_this"
+#include "bad_weak_ptr"

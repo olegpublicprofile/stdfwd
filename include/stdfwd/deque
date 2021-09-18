@@ -2,14 +2,13 @@
 
 #include "stdfwd_details.hpp"
 
+#include "allocator"
+
 //------------------------------------------------------------------------------
 
 STDFWD_STD_BEGIN
 
-	template< class T > class allocator;
-
-	template< class T, class Allocator >
-	class deque;
+	template< class T, class Allocator > class deque;
 
 STDFWD_STD_END
 

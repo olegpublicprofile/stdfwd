@@ -1,0 +1,28 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../allocator"
+#include "../less"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class Key, class Compare, class Allocator >
+	class set;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<
+		class Key,
+		class Compare = std::less< Key >,
+		class Allocator = std::allocator< Key >
+	>
+	using set = std::set< Key, Compare, Allocator >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+#ifdef STDFWD_IS_LIBSTDCPP
+    #define STDFWD_ERROR_CATEGORY_NAMESPACE_BEGIN inline namespace _V2 {
+    #define STDFWD_ERROR_CATEGORY_NAMESPACE_END }
+#else
+    #define STDFWD_ERROR_CATEGORY_NAMESPACE_BEGIN
+    #define STDFWD_ERROR_CATEGORY_NAMESPACE_END
+#endif
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    STDFWD_ERROR_CATEGORY_NAMESPACE_BEGIN
+    class error_category;
+    STDFWD_ERROR_CATEGORY_NAMESPACE_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    using std::error_category;
+}

@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../size_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_PURE_BEGIN
+
+	enum class align_val_t : std::size_t;
+
+STDFWD_STD_PURE_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::align_val_t;
+}
+
+//------------------------------------------------------------------------------

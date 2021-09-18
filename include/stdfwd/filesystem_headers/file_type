@@ -1,0 +1,34 @@
+#pragma once
+
+#include "filesystem_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_BEGIN_NAMESPACE_FILESYSTEM
+
+	#ifdef STDFWD_IS_MSVC
+	enum class file_type;
+	#else
+	enum class file_type : signed char;
+	#endif
+
+
+STDFWD_END_NAMESPACE_FILESYSTEM
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+namespace filesystem {
+
+#ifdef STDFWD_IS_CPP17
+
+	using std::filesystem::file_type;
+
+#endif
+
+} // namespace filesystem
+} // namespace stdfwd
+
+//------------------------------------------------------------------------------
+
+

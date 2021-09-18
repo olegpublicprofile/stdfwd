@@ -1,0 +1,25 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+namespace chrono
+{
+	template<class Rep, class Period > class duration;
+}
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+namespace chrono {
+
+	template<class Rep, class Period >
+	using duration = std::chrono::duration< Rep, Period >;
+}
+}
+
+//------------------------------------------------------------------------------

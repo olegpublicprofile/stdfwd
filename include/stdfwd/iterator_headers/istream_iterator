@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../char_traits"
+#include "../ptrdiff_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T, class CharT, class Traits, class Distance>
+	class istream_iterator;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class T,
+			  class CharT = char,
+			  class Traits = std::char_traits<CharT>,
+			  class Distance = std::ptrdiff_t
+	>
+	using istream_iterator = std::istream_iterator< T, CharT, Traits, Distance>;
+
+}
+
+//------------------------------------------------------------------------------

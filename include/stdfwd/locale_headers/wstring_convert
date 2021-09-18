@@ -1,0 +1,32 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../allocator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+	template< class Codecvt, class Elem, class Wide_alloc, class Byte_alloc >
+	class wstring_convert;
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class Codecvt,
+		  class Elem = wchar_t,
+		  class Wide_alloc = std::allocator<Elem>,
+		  class Byte_alloc = std::allocator<char>
+	> using wstring_convert = std::wstring_convert<
+		Codecvt,
+		Elem,
+		Wide_alloc,
+		Byte_alloc
+	>;
+}

@@ -1,0 +1,18 @@
+#pragma once
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class RealType> class exponential_distribution;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using exponential_distribution = std::exponential_distribution< double >;
+}
+
+//------------------------------------------------------------------------------

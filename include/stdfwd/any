@@ -1,6 +1,7 @@
 #pragma once
 
 #include "stdfwd_details.hpp"
+#include "bad_any_cast"
 
 //------------------------------------------------------------------------------
 
@@ -12,17 +13,8 @@ STDFWD_STD_END
 
 //------------------------------------------------------------------------------
 
-STDFWD_STD_PURE_BEGIN
-
-	class bad_any_cast;
-
-STDFWD_STD_PURE_END
-
-//------------------------------------------------------------------------------
-
 namespace stdfwd
 {
-	using std::bad_any_cast;
 	using std::any;
 }
 

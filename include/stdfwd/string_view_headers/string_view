@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../basic_string_view"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	using string_view = basic_string_view<char, char_traits<char>>;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::string_view;
+}
+
+//------------------------------------------------------------------------------

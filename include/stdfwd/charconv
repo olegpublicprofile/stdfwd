@@ -1,30 +1,5 @@
 #pragma once
 
-#include "stdfwd_details.hpp"
-
-//------------------------------------------------------------------------------
-
-STDFWD_STD_BEGIN
-
-	#ifdef STDFWD_IS_CPP17
-	enum class chars_format;
-	#endif
-
-	struct to_chars_result;
-	struct from_chars_result;
-
-STDFWD_STD_END
-
-//------------------------------------------------------------------------------
-
-namespace stdfwd
-{
-	#ifdef STDFWD_IS_CPP17
-	using std::chars_format;
-	#endif
-
-	using std::to_chars_result;
-	using std::from_chars_result;
-}
-
-//------------------------------------------------------------------------------
+#include "chars_format"
+#include "to_chars_result"
+#include "from_chars_result"

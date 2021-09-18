@@ -13,7 +13,7 @@ if(NOT ${hasParent})
 # Standalone version (for testing)
 else()
 
-	set(CMAKE_CXX_STANDARD 11)
+    set(CMAKE_CXX_STANDARD 11)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
     file(GLOB_RECURSE SOURCES "tests/*.*" "include/*")

@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T > class shared_ptr;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class T >
+	using shared_ptr = std::shared_ptr< T >;
+}
+
+//------------------------------------------------------------------------------

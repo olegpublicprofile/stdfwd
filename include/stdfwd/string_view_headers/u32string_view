@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../basic_string_view"
+
+//------------------------------------------------------------------------------
+
+#ifdef STDFWD_IS_CPP11
+	#define STDFWD_IS_U32STRING
+#endif
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	#ifdef STDFWD_IS_U32STRING
+	using u32string_view = basic_string_view<char32_t, char_traits<char32_t>>;
+	#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	#ifdef STDFWD_IS_U32STRING
+		using std::u32string_view;
+	#endif
+}
+
+//------------------------------------------------------------------------------

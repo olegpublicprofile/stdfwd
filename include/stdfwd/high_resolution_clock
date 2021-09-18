@@ -1,0 +1,3 @@
+#pragma once
+
+#include "chrono_headers/high_resolution_clock"

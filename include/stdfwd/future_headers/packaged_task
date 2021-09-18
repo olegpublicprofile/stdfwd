@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class R > class packaged_task;
+	template< class R, class ...Args >
+	class packaged_task<R(Args...)>;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class R >
+	using packaged_task = std::packaged_task< R >;
+}
+
+//------------------------------------------------------------------------------

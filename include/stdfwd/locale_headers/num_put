@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../ostreambuf_iterator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class charT, class OutputIterator > class num_put;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template <
+		class charT,
+		class OutputIterator = ostreambuf_iterator<charT>
+	> using num_put = std::num_put< charT, OutputIterator >;
+
+}
+
+//------------------------------------------------------------------------------

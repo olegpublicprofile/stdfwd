@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class Ptr > struct pointer_traits;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class Ptr >
+	using pointer_traits = std::pointer_traits< Ptr >;
+
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,42 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../ptrdiff_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<
+		class Category,
+		class T,
+		class Distance,
+		class Pointer,
+		class Reference
+	>
+	struct iterator;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<
+		class Category,
+		class T,
+		class Distance = std::ptrdiff_t,
+		class Pointer = T*,
+		class Reference = T&
+	>
+
+	using iterator = std::iterator<
+		Category,
+		T,
+		Distance,
+		Pointer,
+		Reference
+	>;
+
+}

@@ -1,0 +1,20 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class IntType> class geometric_distribution;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using geometric_distribution = std::geometric_distribution< int >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+
+STDFWD_STD_BEGIN
+
+	template< class internT, class externT, class stateT >
+	class codecvt_byname;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class internT, class externT, class stateT >
+	using codecvt_byname = std::codecvt_byname< internT, externT, stateT >;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../allocator"
+#include "../deque"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T, class Container >
+	class queue;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class T, class Container = deque< T > >
+	using queue = std::queue< T, Container >;
+}
+
+//------------------------------------------------------------------------------
+

@@ -1,0 +1,3 @@
+#pragma once
+
+#include "memory_headers/weak_ptr"

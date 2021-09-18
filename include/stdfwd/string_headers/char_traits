@@ -1,0 +1,17 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	#ifdef STDFWD_IS_MSVC
+	template< class CharT > struct char_traits;
+	#else
+	template< class CharT > class char_traits;
+	#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------

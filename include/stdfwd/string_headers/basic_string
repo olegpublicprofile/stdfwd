@@ -1,0 +1,31 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../char_traits"
+#include "../allocator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_INLINE_BEGIN
+
+	template< class Char, class Traits, class Allocator >
+	class STDFWD_TEMPLATE_VISIBILITY basic_string;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<
+		class Char,
+		class Traits		= std::char_traits<Char>,
+		class Allocator		= std::allocator<Char>
+	> using basic_string	= std::basic_string<Char, Traits, Allocator>;
+}
+
+//------------------------------------------------------------------------------

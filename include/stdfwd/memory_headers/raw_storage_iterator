@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class OutputIt, class T >
+	class raw_storage_iterator;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class OutputIt, class T >
+	using raw_storage_iterator = std::raw_storage_iterator< OutputIt, T >;
+
+}
+
+//------------------------------------------------------------------------------

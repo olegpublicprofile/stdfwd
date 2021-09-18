@@ -1,0 +1,24 @@
+#pragma once
+
+#include "stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+#if defined (STDFWD_IS_LIBSTDCPP)
+	#if __WORDSIZE == 64
+		typedef unsigned long int		uint_fast64_t;
+	#else
+		__extension__
+		typedef unsigned long long int	uint_fast64_t;
+	#endif
+#else
+	typedef unsigned long long			uint64_t;
+
+	typedef uint64_t					uint_fast64_t;
+#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------

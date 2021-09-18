@@ -1,0 +1,20 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template<class RealType> class normal_distribution;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using normal_distribution = std::normal_distribution< double >;
+}
+
+//------------------------------------------------------------------------------

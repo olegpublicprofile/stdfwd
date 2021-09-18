@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_PURE_BEGIN
+namespace pmr
+{
+	class monotonic_buffer_resource;
+}
+STDFWD_STD_PURE_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd::pmr
+{
+	using std::pmr::monotonic_buffer_resource;
+}
+
+//------------------------------------------------------------------------------

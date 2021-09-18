@@ -1,0 +1,24 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../subtract_with_carry_engine"
+#include "../uint_fast64_t"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	typedef subtract_with_carry_engine<uint_fast64_t, 48, 5, 12>
+	ranlux48_base;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::ranlux48_base;
+}
+
+//------------------------------------------------------------------------------

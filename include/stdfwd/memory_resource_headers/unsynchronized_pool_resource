@@ -1,0 +1,25 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_PURE_BEGIN
+namespace pmr
+{
+	#ifdef STDFWD_IS_MSVC
+	struct unsynchronized_pool_resource;
+	#else
+	class unsynchronized_pool_resource;
+	#endif
+}
+STDFWD_STD_PURE_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd::pmr
+{
+	using std::pmr::unsynchronized_pool_resource;
+}
+
+//------------------------------------------------------------------------------

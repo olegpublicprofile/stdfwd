@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../char_traits"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class CharT, class Traits > class ostreambuf_iterator;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class CharT, class Traits = std::char_traits<CharT> >
+	using ostreambuf_iterator = std::ostreambuf_iterator< CharT, Traits >;
+}
+
+//------------------------------------------------------------------------------

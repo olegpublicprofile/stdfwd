@@ -1,0 +1,24 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	#ifdef STDFWD_IS_MSVC
+	struct time_base;
+	#else
+	class time_base;
+	#endif
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::time_base;
+}
+
+//------------------------------------------------------------------------------

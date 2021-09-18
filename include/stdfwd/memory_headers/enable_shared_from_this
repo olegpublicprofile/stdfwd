@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T > class enable_shared_from_this;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class T >
+	using enable_shared_from_this = std::enable_shared_from_this< T >;
+}
+
+//------------------------------------------------------------------------------

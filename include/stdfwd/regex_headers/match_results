@@ -1,0 +1,27 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+#include "../allocator"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+
+	template<class BiIt, class Allocator>
+	class match_results;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<class BiIt, class Allocator = allocator<sub_match<BiIt>>>
+	using match_results = std::match_results< BiIt, Allocator >;
+}
+
+//------------------------------------------------------------------------------

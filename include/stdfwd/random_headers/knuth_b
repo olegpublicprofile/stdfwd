@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../shuffle_order_engine"
+#include "../minstd_rand0"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	using std::knuth_b;
+}
+
+//------------------------------------------------------------------------------

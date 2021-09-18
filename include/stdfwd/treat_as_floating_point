@@ -1,0 +1,3 @@
+#pragma once
+
+#include "chrono_headers/treat_as_floating_point"

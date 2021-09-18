@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_BEGIN
+
+	template<class BiIt, class CharT, class Traits >
+	class regex_token_iterator;
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template<
+		class BiIt,
+		class CharT = typename iterator_traits<BiIt>::value_type,
+		class Traits = regex_traits<CharT>
+	>
+	using regex_token_iterator = std::regex_token_iterator< BiIt, CharT, Traits >;
+}
+
+//------------------------------------------------------------------------------

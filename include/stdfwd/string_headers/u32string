@@ -1,0 +1,35 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+#ifdef STDFWD_IS_CPP11
+	#define STDFWD_IS_U32STRING
+#endif
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	STDFWD_CPP11_INLINE_BEGIN
+
+	#ifdef STDFWD_IS_U32STRING
+	using u32string = basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>>;
+	#endif
+
+	STDFWD_CPP11_END
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	#ifdef STDFWD_IS_U32STRING
+	using std::u32string;
+	#endif
+}
+
+//------------------------------------------------------------------------------
+

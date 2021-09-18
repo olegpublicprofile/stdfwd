@@ -30,6 +30,9 @@
 #include "tests/any/any_mini.hpp"
 #include "tests/any/any_full.hpp"
 
+#include "tests/bad_any_cast/bad_any_cast_mini.hpp"
+#include "tests/bad_any_cast/bad_any_cast_full.hpp"
+
 #include "tests/valarray/valarray_mini.hpp"
 #include "tests/valarray/valarray_full.hpp"
 
@@ -70,6 +73,9 @@ void run()
 
 	any_tests::run_mini();
 	any_tests::run_full();
+
+	bad_any_cast_tests::run_mini();
+	bad_any_cast_tests::run_full();
 
 	valarray_tests::run_mini();
 	valarray_tests::run_full();

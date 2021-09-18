@@ -1,0 +1,23 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template <class R1, class R2> struct ratio_greater;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+
+	template <class R1, class R2>
+	using ratio_greater = std::ratio_greater<R1, R2>;
+
+} // namespace stdfwd
+
+//------------------------------------------------------------------------------
+

@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class Alloc > struct allocator_traits;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+	template< class Alloc >
+	using allocator_traits = std::allocator_traits< Alloc >;
+}
+
+//------------------------------------------------------------------------------

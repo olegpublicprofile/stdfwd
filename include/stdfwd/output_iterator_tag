@@ -1,0 +1,3 @@
+#pragma once
+
+#include "iterator_headers/output_iterator_tag"

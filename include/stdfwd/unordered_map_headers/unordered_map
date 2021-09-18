@@ -1,0 +1,40 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+#include "../hash"
+#include "../equal_to"
+#include "../allocator"
+#include "../pair"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+    template< class Key, class T, class Hash, class KeyEqual, class Allocator >
+    class unordered_map;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+    template<
+        class Key,
+        class T,
+        class Hash = std::hash< Key >,
+        class KeyEqual = std::equal_to< Key >,
+        class Allocator = std::allocator< std::pair< const Key, T > >
+    >
+    using unordered_map = std::unordered_map<
+        Key,
+        T,
+        Hash,
+        KeyEqual,
+        Allocator
+    >;
+
+}
+
+//------------------------------------------------------------------------------

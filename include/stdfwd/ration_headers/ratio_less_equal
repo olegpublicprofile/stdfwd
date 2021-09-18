@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+template <class R1, class R2> struct ratio_less_equal;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd {
+
+	template <class R1, class R2>
+	using ratio_less_equal = std::ratio_less_equal<R1, R2>;
+
+} // namespace stdfwd
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+#pragma once
+
+#include "../stdfwd_details.hpp"
+
+//------------------------------------------------------------------------------
+
+STDFWD_STD_BEGIN
+
+	template< class T > class weak_ptr;
+
+STDFWD_STD_END
+
+//------------------------------------------------------------------------------
+
+namespace stdfwd
+{
+
+	template< class T >
+	using weak_ptr = std::weak_ptr< T >;
+}
+
+//------------------------------------------------------------------------------

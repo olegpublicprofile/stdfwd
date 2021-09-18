@@ -1,0 +1,3 @@
+#pragma once
+
+#include "typeinfo_headers/type_info"
